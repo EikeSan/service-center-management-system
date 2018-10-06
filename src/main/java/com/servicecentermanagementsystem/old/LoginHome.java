@@ -45,7 +45,7 @@ public class LoginHome extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(400, 350));
         getContentPane().setLayout(null);
 
-        viewCust.setText("view customers");
+        viewCust.setText("fxml customers");
         viewCust.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewCustActionPerformed(evt);
@@ -104,7 +104,7 @@ public class LoginHome extends javax.swing.JFrame {
         getContentPane().add(lbid3);
         lbid3.setBounds(10, 170, 140, 20);
 
-        viewModels.setText("view models");
+        viewModels.setText("fxml models");
         viewModels.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewModelsActionPerformed(evt);
@@ -113,7 +113,7 @@ public class LoginHome extends javax.swing.JFrame {
         getContentPane().add(viewModels);
         viewModels.setBounds(260, 170, 130, 29);
 
-        viewRecords.setText("view records");
+        viewRecords.setText("fxml records");
         viewRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewRecordsActionPerformed(evt);

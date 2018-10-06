@@ -99,7 +99,7 @@ public class AdminInsert extends javax.swing.JFrame {
         brands.add(lbError);
         lbError.setBounds(90, 220, 190, 20);
 
-        viewBrands.setText("view brands");
+        viewBrands.setText("fxml brands");
         viewBrands.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewBrandsActionPerformed(evt);

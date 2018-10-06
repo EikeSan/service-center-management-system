@@ -3,16 +3,17 @@ package com.servicecentermanagementsystem.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.servicecentermanagementsystem.view.FxmlView;
+import com.servicecentermanagementsystem.view.StageManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import org.springframework.boot.SpringApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+
+import javafx.scene.layout.AnchorPane;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.net.URL;
@@ -20,7 +21,12 @@ import java.util.ResourceBundle;
 
 @Component
 public class LoginController implements Initializable {
-    private ConfigurableApplicationContext  springContext;
+
+    private static final Logger LOG = LoggerFactory.getLogger(LoginController.class);
+    private final StageManager stageManager;
+
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     private JFXTextField username;
@@ -40,22 +46,21 @@ public class LoginController implements Initializable {
 
     }
 
+    @Autowired @Lazy
+    public LoginController(StageManager stageManager) {
+        this.stageManager = stageManager;
+    }
+
     public void login(String username, String password){
         try {
             if (username.equals("admin") && password.equals("123456")){
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("admin.fxml"));
-                Parent parent = fxmlLoader.load();
-
-                Stage stage = new Stage(StageStyle.DECORATED);
-                stage.setTitle("Library Assistant");
-                stage.setScene(new Scene(parent));
-                stage.show();
+                stageManager.switchScene(FxmlView.ADMIN);
 
             }else {
-                System.out.println(username+ "\n" + password );
+
             }
         }catch (Exception e){
-            e.printStackTrace();
+            LOG.info(e.getMessage());
         }
 
     }

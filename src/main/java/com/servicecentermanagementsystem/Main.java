@@ -1,42 +1,56 @@
 package com.servicecentermanagementsystem;
 
+import com.servicecentermanagementsystem.view.FxmlView;
+import com.servicecentermanagementsystem.view.StageManager;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class Main extends Application {
 
     private ConfigurableApplicationContext  springContext;
-    private Parent root;
+
+    private StageManager stageManager;
+
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
 
     @Override
     public void init() throws Exception {
-        springContext = SpringApplication.run(Main.class);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("view/index.fxml"));
-        fxmlLoader.setControllerFactory(springContext::getBean);
-        root = fxmlLoader.load();
+        springContext = bootstrapSpringApplicationContext();
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setTitle("Service Center Management System");
-        Scene scene = new Scene(root, 800, 600);
-        stage.setScene(scene);
-        stage.show();
+        stageManager = springContext.getBean(StageManager.class, stage);
+        displayInitialScene();
     }
 
     @Override
     public void stop() throws Exception {
-        springContext.stop();
+        springContext.close();
     }
 
-    public static void main(String[] args) {
-        launch(Main.class, args);
+    /**
+     * Useful to override this method by sub-classes wishing to change the first
+     * Scene to be displayed on startup. Example: Functional tests on main
+     * window.
+     */
+    protected void displayInitialScene() {
+        stageManager.switchScene(FxmlView.LOGIN);
     }
+
+    /////////////////////////// PRIVATE ///////////////////////////////////////
+    private ConfigurableApplicationContext bootstrapSpringApplicationContext() {
+        SpringApplicationBuilder builder = new SpringApplicationBuilder(Main.class);
+        String[] args = getParameters().getRaw().stream().toArray(String[]::new);
+        builder.headless(false); //needed for TestFX integration testing or eles will get a java.awt.HeadlessException during tests
+        return builder.run(args);
+    }
+
+
 }
