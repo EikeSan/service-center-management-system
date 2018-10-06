@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package msc;
+package com.servicecentermanagementsystem.old;
 
 
-public class loginHome extends javax.swing.JFrame {
+public class LoginHome extends javax.swing.JFrame {
 
     /**
-     * Creates new form loginHome
+     * Creates new form LoginHome
      */
-    displaydata dd = new displaydata();
+    DisplayData dd = new DisplayData();
 
-    public loginHome() {
+    public LoginHome() {
         initComponents();
            
     }
@@ -45,7 +45,7 @@ public class loginHome extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(400, 350));
         getContentPane().setLayout(null);
 
-        viewCust.setText("View customers");
+        viewCust.setText("view customers");
         viewCust.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewCustActionPerformed(evt);
@@ -104,7 +104,7 @@ public class loginHome extends javax.swing.JFrame {
         getContentPane().add(lbid3);
         lbid3.setBounds(10, 170, 140, 20);
 
-        viewModels.setText("View models");
+        viewModels.setText("view models");
         viewModels.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewModelsActionPerformed(evt);
@@ -113,7 +113,7 @@ public class loginHome extends javax.swing.JFrame {
         getContentPane().add(viewModels);
         viewModels.setBounds(260, 170, 130, 29);
 
-        viewRecords.setText("View records");
+        viewRecords.setText("view records");
         viewRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewRecordsActionPerformed(evt);
@@ -122,7 +122,7 @@ public class loginHome extends javax.swing.JFrame {
         getContentPane().add(viewRecords);
         viewRecords.setBounds(260, 140, 130, 29);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/msc/msc.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, -110, 620, 530);
 
@@ -153,7 +153,7 @@ public class loginHome extends javax.swing.JFrame {
     private void insertRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insertRecordsActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        insertRecord ir = new insertRecord();
+        InsertRecord ir = new InsertRecord();
         ir.setVisible(true);
     }//GEN-LAST:event_insertRecordsActionPerformed
 
@@ -193,13 +193,13 @@ public class loginHome extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(loginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(loginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(loginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(loginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LoginHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -207,7 +207,7 @@ public class loginHome extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new loginHome().setVisible(true);
+                new LoginHome().setVisible(true);
             }
         });
     }

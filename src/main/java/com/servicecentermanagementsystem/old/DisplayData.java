@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package msc;
+package com.servicecentermanagementsystem.old;
 
 import java.awt.event.ActionEvent;
 import java.sql.Connection;
@@ -18,7 +18,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class displaydata extends JFrame {
+public class DisplayData extends JFrame {
 
 	private JPanel contentPane;
 	JFrame frame1;

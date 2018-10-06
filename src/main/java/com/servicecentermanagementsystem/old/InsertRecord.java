@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package msc;
+package com.servicecentermanagementsystem.old;
 
 
-public class insertRecord extends javax.swing.JFrame {
+public class InsertRecord extends javax.swing.JFrame {
 
     /**
-     * Creates new form insertRecord
+     * Creates new form InsertRecord
      */
-    connect c = new connect();
-    public insertRecord() {
+    Connect c = new Connect();
+    public InsertRecord() {
         initComponents();
     }
 
@@ -203,7 +203,7 @@ public class insertRecord extends javax.swing.JFrame {
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
         //close();
-        loginHome back = new loginHome();
+        LoginHome back = new LoginHome();
         setVisible(false);
         back.setVisible(true);
     }//GEN-LAST:event_logoutActionPerformed
@@ -225,20 +225,20 @@ public class insertRecord extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(insertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(insertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(insertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(insertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InsertRecord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new insertRecord().setVisible(true);
+                new InsertRecord().setVisible(true);
             }
         });
     }

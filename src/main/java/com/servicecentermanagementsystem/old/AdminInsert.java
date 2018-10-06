@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package msc;
+package com.servicecentermanagementsystem.old;
 
 
-public class adminInsert extends javax.swing.JFrame {
+public class AdminInsert extends javax.swing.JFrame {
 
     /**
-     * Creates new form adminInsert
+     * Creates new form AdminInsert
      */
-    connect c = new connect();
-    public adminInsert() {
+    Connect c = new Connect();
+    public AdminInsert() {
         initComponents();
     }
  
@@ -99,7 +99,7 @@ public class adminInsert extends javax.swing.JFrame {
         brands.add(lbError);
         lbError.setBounds(90, 220, 190, 20);
 
-        viewBrands.setText("View brands");
+        viewBrands.setText("view brands");
         viewBrands.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewBrandsActionPerformed(evt);
@@ -108,7 +108,7 @@ public class adminInsert extends javax.swing.JFrame {
         brands.add(viewBrands);
         viewBrands.setBounds(267, 220, 110, 29);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/msc/msc.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
         brands.add(jLabel1);
         jLabel1.setBounds(0, -110, 620, 530);
 
@@ -156,7 +156,7 @@ public class adminInsert extends javax.swing.JFrame {
         models.add(lbError1);
         lbError1.setBounds(100, 240, 190, 20);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/msc/msc.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
         models.add(jLabel2);
         jLabel2.setBounds(0, -110, 620, 530);
 
@@ -191,7 +191,7 @@ public class adminInsert extends javax.swing.JFrame {
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         // TODO add your handling code here:
         //close();
-        adminLogin logoff = new adminLogin();
+        AdminLogin logoff = new AdminLogin();
         setVisible(false);
         logoff.setVisible(true);
     }//GEN-LAST:event_logoutActionPerformed
@@ -199,7 +199,7 @@ public class adminInsert extends javax.swing.JFrame {
     private void viewBrandsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBrandsActionPerformed
         // TODO add your handling code here:
         String sql = "select brands,models from counting;";
-        displaydata d = new displaydata();
+        DisplayData d = new DisplayData();
         d.actionPerformed4(evt, sql);
     }//GEN-LAST:event_viewBrandsActionPerformed
 
@@ -220,20 +220,20 @@ public class adminInsert extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(adminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(adminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(adminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(adminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdminInsert.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new adminInsert().setVisible(true);
+                new AdminInsert().setVisible(true);
                 
             }
         });

@@ -1,7 +1,4 @@
-package msc;
-
-
-import javax.swing.JFrame;
+package com.servicecentermanagementsystem.old;
 
 
 public class Login1 extends javax.swing.JFrame {
@@ -93,7 +90,7 @@ public class Login1 extends javax.swing.JFrame {
                 if(pass.contains("12345") &&  user.contains("user")) {
                     //close();
                     lbError.setText(null);
-                    loginHome lh = new loginHome();
+                    LoginHome lh = new LoginHome();
                     setVisible(false);
                     lh.setVisible(true);
                     //setContentPane(admin);
@@ -110,7 +107,7 @@ public class Login1 extends javax.swing.JFrame {
     private void adminLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminLoginActionPerformed
         // TODO add your handling code here:
                 
-                adminLogin admin = new adminLogin();
+                AdminLogin admin = new AdminLogin();
                 setVisible(false);
                 admin.setVisible(true);
                 //close();
