@@ -24,7 +24,18 @@ public enum FxmlView {
         String getFxmlFile() {
             return "/fxml/index.fxml";
         }
+    }, DRAWER_CONTENT {
+        @Override
+        String getTitle() {
+            return getStringFromResourceBundle("main.app.title");
+        }
+
+        @Override
+        String getFxmlFile() {
+            return "/fxml/adminSidePane.fxml";
+        }
     };
+
     
     abstract String getTitle();
     abstract String getFxmlFile();

@@ -4,10 +4,10 @@
 <?import com.jfoenix.controls.JFXHamburger?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBDEFB;;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicecentermanagementsystem.controller.AdminController">
    <children>
-      <JFXHamburger fx:id="hamburger" layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="65.0" />
-      <JFXDrawer fx:id="drawer" direction="TOP" prefHeight="465.0" prefWidth="271.0" />
+      <AnchorPane fx:id="contentPane" layoutY="46.0" prefHeight="554.0" prefWidth="800.0" style="-fx-background-color: #0D47A1;" />
+      <JFXHamburger fx:id="hamburger" prefHeight="54.0" prefWidth="56.0" />
+      <JFXDrawer fx:id="drawer" layoutY="38.0" prefHeight="340.0" prefWidth="250.0" />
    </children>
 </AnchorPane>
