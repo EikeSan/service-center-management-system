@@ -7,7 +7,7 @@
 <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #BBDEFB;;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicecentermanagementsystem.controller.AdminController">
    <children>
       <AnchorPane fx:id="contentPane" layoutY="46.0" prefHeight="554.0" prefWidth="800.0" style="-fx-background-color: #0D47A1;" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" direction="TOP" prefHeight="340.0" prefWidth="250.0" />
       <JFXHamburger fx:id="hamburger" prefHeight="54.0" prefWidth="56.0" />
-      <JFXDrawer fx:id="drawer" layoutY="38.0" prefHeight="340.0" prefWidth="250.0" />
    </children>
 </AnchorPane>

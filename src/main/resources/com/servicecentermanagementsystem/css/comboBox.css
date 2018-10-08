@@ -1,0 +1,21 @@
+.combo-box,
+.choice-box {
+    -fx-font-family: System;
+    -fx-font-size: 15px;
+    -fx-prompt-text-fill: white;
+    -fx-text-fill: white;
+    -fx-background-color: none;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: none;
+    -fx-padding: 0 0 3 -8;
+}
+
+.combo-box .list-cell:filled:selected .text,
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill: white;
+}
+
+.combo-box .arrow,
+.choice-box .arrow {
+    -fx-background-color: white;
+}

@@ -1,0 +1,6 @@
+/*Raised button example */
+.jfx-button {
+    -jfx-button-type: FLAT;
+    -fx-background-color: #39b13c;
+    -fx-text-fill: white;
+}

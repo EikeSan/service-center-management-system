@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="554.0" prefWidth="800.0" style="-fx-background-color: #0D47A1;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.servicecentermanagementsystem.controller.ModelContent">
+   <children>
+      <AnchorPane prefHeight="554.0" prefWidth="281.0" style="-fx-border-color: white;">
+         <children>
+            <Text fill="WHITE" layoutX="80.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Model">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="modelNameField" layoutX="10.0" layoutY="143.0" prefHeight="31.0" prefWidth="262.0" promptText="Model name" style="-fx-text-fill: white;" stylesheets="@../com/servicecentermanagementsystem/css/login.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXSlider fx:id="warrantySlider" layoutX="6.0" layoutY="237.0" majorTickUnit="2.0" max="10.0" minorTickCount="1" prefHeight="38.0" prefWidth="269.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" stylesheets="@../com/servicecentermanagementsystem/css/slider.css" value="5.0" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warranty Time">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="brandPicker" layoutX="14.0" layoutY="287.0" prefHeight="34.0" prefWidth="262.0" promptText="Brand" stylesheets="@../com/servicecentermanagementsystem/css/comboBox.css" />
+            <JFXButton fx:id="saveButton" layoutX="98.0" layoutY="366.0" prefHeight="44.0" prefWidth="94.0" stylesheets="@../com/servicecentermanagementsystem/css/successButton.css" text="Save">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXTreeTableView layoutX="281.0" layoutY="-1.0" prefHeight="554.0" prefWidth="518.0" />
+   </children>
+</AnchorPane>
